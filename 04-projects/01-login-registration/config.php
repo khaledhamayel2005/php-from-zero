@@ -1,6 +1,4 @@
 <?php
-// config.php - minimal DB settings for the login project
-// Update these values if your local MySQL credentials differ.
 
 declare(strict_types=1);
 
