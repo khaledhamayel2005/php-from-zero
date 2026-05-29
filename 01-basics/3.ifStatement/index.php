@@ -1,42 +1,38 @@
 <?php
-$number = $_GET["number"] ?? "";
-$result = "";
-$error = "";
+// Validate the input before comparing it with numbers.
+$age = filter_input(INPUT_GET, 'age', FILTER_VALIDATE_INT, array('options' => array('min_range' => 1)));
+$message = '';
 
-if($number > 18){
-    $result = "you are an adult";
-} elseif($number > 12){
-    $result = "you are a teenager";
-} elseif($number > 0){
-    $result = "you are a child";
+if ($age === null) {
+    $message = 'Enter an age to see the result.';
+} elseif ($age === false) {
+    $message = 'Please enter a valid positive number.';
+} elseif ($age >= 18) {
+    $message = 'You are an adult.';
+} elseif ($age >= 13) {
+    $message = 'You are a teenager.';
 } else {
-    $error = "please enter a valid age";
-} 
-
-$result = "the result is: {$result}";
+    $message = 'You are a child.';
+}
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>PHP If Statement Tutorial</title>
 </head>
 <body>
-    
+    <h1>PHP If / Else</h1>
+    <p>This example shows how PHP chooses one message based on the entered age.</p>
+
     <form action="index.php" method="get">
-        <label for="number"> number</label>
-        <input type="text" id="number" name="number" placeholder="Enter your age" value="<?php echo htmlspecialchars((string)$number); ?>">
-        <input type="submit" value="check">
+        <label for="age">Age</label>
+        <input type="number" id="age" name="age" min="1" placeholder="Enter your age" value="<?php echo htmlspecialchars((string)($age ?? '')); ?>">
+        <input type="submit" value="Check">
     </form>
 
-
-    <?php if ($error !== ""): ?>
-        <p><?php echo $error; ?></p>
-    <?php else: ?>
-        <p><?php echo $result; ?></p>
-    <?php endif; ?>
+    <p><?php echo htmlspecialchars($message); ?></p>
 </body>
 </html>
