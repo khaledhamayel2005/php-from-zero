@@ -1,12 +1,5 @@
 <?php
-// Minimal registration page using mysqli
-// This file is intentionally simple so you can study it.
-// Inline comments explain each step in English.
 
-// Show PHP runtime errors in browser to help debugging while studying.
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
 
 // Load DB credentials from `config.php` (keeps credentials separate)
 require_once __DIR__ . '/config.php';
@@ -38,45 +31,34 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Connection failed — helpful message for learners
         $errors[] = 'Database connection failed: ' . $conn->connect_error;
       } else {
-        // Create a simple `users` table if it does not exist. This keeps setup zero-config.
-        $create = "CREATE TABLE IF NOT EXISTS users (
-          id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-          fname VARCHAR(100) NOT NULL,
-          lname VARCHAR(100) NOT NULL,
-          email VARCHAR(255) NOT NULL UNIQUE,
-          password VARCHAR(255) NOT NULL,
-          created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;";
-        if (!$conn->query($create)) {
-          $errors[] = 'Failed creating users table: ' . $conn->error;
-        } else {
-          // Ensure password column can hold modern password_hash output
-          $alter = "ALTER TABLE users MODIFY password VARCHAR(255) NOT NULL";
-          if (!$conn->query($alter)) {
-            // Not fatal: some MySQL versions will return error if column already matches.
-            $errors[] = 'Warning: could not adjust password column size: ' . $conn->error;
-          }
+        // NOTE: This script no longer creates or alters database tables.
+        // The `users` table must be created manually once by the developer.
+        // Expected minimal schema:
+        //  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY
+        //  fname VARCHAR(100)
+        //  lname VARCHAR(100)
+        //  email VARCHAR(255) UNIQUE
+        //  password VARCHAR(255)
 
-          // Protect values from SQL injection by escaping before interpolation
-          $emailEsc = $conn->real_escape_string($email);
-          // Check if email already exists
-          $check = $conn->query("SELECT id FROM users WHERE email = '$emailEsc' LIMIT 1");
-          if ($check === false) {
-            $errors[] = 'Query error: ' . $conn->error;
-          } elseif ($check->num_rows > 0) {
-            $errors[] = 'Email is already registered.';
+        // Protect values from SQL injection by escaping before interpolation
+        $emailEsc = $conn->real_escape_string($email);
+        // Check if email already exists
+        $check = $conn->query("SELECT id FROM users WHERE email = '$emailEsc' LIMIT 1");
+        if ($check === false) {
+          $errors[] = 'Query error: ' . $conn->error;
+        } elseif ($check->num_rows > 0) {
+          $errors[] = 'Email is already registered.';
+        } else {
+          // Hash the password using PHP's recommended algorithm
+          $hash = password_hash($password, PASSWORD_DEFAULT);
+          $fnameEsc = $conn->real_escape_string($fname);
+          $lnameEsc = $conn->real_escape_string($lname);
+          // Insert user record
+          $sql = "INSERT INTO users (fname, lname, email, password) VALUES ('$fnameEsc', '$lnameEsc', '$emailEsc', '$hash')";
+          if ($conn->query($sql)) {
+            $success = 'Registered successfully. You can <a href="simple_login.php">login</a>.';
           } else {
-            // Hash the password using PHP's recommended algorithm
-            $hash = password_hash($password, PASSWORD_DEFAULT);
-            $fnameEsc = $conn->real_escape_string($fname);
-            $lnameEsc = $conn->real_escape_string($lname);
-            // Insert user record
-            $sql = "INSERT INTO users (fname, lname, email, password) VALUES ('$fnameEsc', '$lnameEsc', '$emailEsc', '$hash')";
-            if ($conn->query($sql)) {
-              $success = 'Registered successfully. You can <a href="simple_login.php">login</a>.';
-            } else {
-              $errors[] = 'Insert failed: ' . $conn->error;
-            }
+            $errors[] = 'Insert failed: ' . $conn->error;
           }
         }
         $conn->close();
