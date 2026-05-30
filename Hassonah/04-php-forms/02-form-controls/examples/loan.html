@@ -1,0 +1,45 @@
+<!-- PHP form example -->
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <b>Namllu Credit Bank Loan Application Form</b>
+    <form method="POST" action="loan.php">
+      First Name:
+      <input name="FirstName" type="text" />
+      Last Name:
+      <input name="LastName" type="text" />
+      Age:
+      <input name="Age" type="text" size="3" />
+      <br />
+      <br />
+      Address:
+      <textarea name="Address" rows="4" cols="40"></textarea>
+      <br />
+      <br />
+      What is your current salary?
+      <select name="Salary">
+        <option value="0">Under $10000</option>
+        <option value="10000">$10,000 to $25,000</option>
+        <option value="25000">$25,000 to $50,000</option>
+        <option value="50000">Over $50,000</option>
+      </select>
+      <br />
+      <br />
+      How much do you want to borrow?<br /><br />
+      <input name="Loan" type="radio" value="1000" />Our $1,000 package at 8.0%
+      interest
+      <br />
+      <input name="Loan" type="radio" value="5000" />Our $5,000 package at 11.5%
+      interest
+      <br />
+      <input name="Loan" type="radio" value=" 10000" />Our $10,000 package at
+      15.0% interest
+      <br />
+      <br />
+      <input type="submit" value="Click here to Submit application" />
+      <input type="reset" value="Reset application form" />
+    </form>
+  </body>
+</html>

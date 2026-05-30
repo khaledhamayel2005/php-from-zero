@@ -1,0 +1,14 @@
+/* Styles */
+.required:after {
+  content: "*";
+  font-weight: bold;
+  color: red;
+}
+.grid-container {
+  display: grid;
+  width: 80%;
+  grid-template-columns: 25% 2fr;
+  grid-gap: 10px;
+  background-color: #2196f3;
+  padding: 10px;
+}

@@ -1,0 +1,24 @@
+<?php
+// Session/cookie example
+// Start session
+session_start();
+// Load file
+include "../dbcon.inc";
+if (isset($_SESSION["userid"])) {
+    $username = $_SESSION["userid"];
+    // Page layout
+    html_header();
+    echo "Hello " . $username . "<br/>";
+    echo "you have visited this page" .
+        $_SESSION["visits"]++ .
+        " times" .
+        "<br/>";
+    echo "you are a Valuable Customer Please send us your comments" . "<br/>";
+    echo "you can send us your comments by visiting the link below" . "<br/>";
+    echo "<a href = \"http://localhost/comp334/ex/php\" target =\"msgWin\"> PHP Example Page</a><br/>";
+    echo "<a href = \"../session_login_index.php\">home</a><br/>";
+    echo "<a href=\"../logout.php\">log out</a>";
+    // Page layout
+    html_footer();
+}
+?>

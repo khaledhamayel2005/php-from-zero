@@ -1,0 +1,286 @@
+<!-- PHP syntax example -->
+<html
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns:w="urn:schemas-microsoft-com:office:word"
+  xmlns="http://www.w3.org/TR/REC-html40"
+>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+    <meta name="ProgId" content="Word.Document" />
+    <meta name="Generator" content="Microsoft Word 11" />
+    <meta name="Originator" content="Microsoft Word 11" />
+    <link rel="File-List" href="GArray_files/filelist.xml" />
+    <title>Array</title>
+    <!--[if gte mso 9
+      ]><xml>
+        <o:DocumentProperties>
+          <o:Author>YOUSEF HASSOUNEH</o:Author>
+          <o:LastAuthor>YOUSEF HASSOUNEH</o:LastAuthor>
+          <o:Revision>1</o:Revision>
+          <o:TotalTime>2</o:TotalTime>
+          <o:Created>2008-04-03T06:32:00Z</o:Created>
+          <o:LastSaved>2008-04-03T06:34:00Z</o:LastSaved>
+          <o:Pages>1</o:Pages>
+          <o:Words>308</o:Words>
+          <o:Characters>1757</o:Characters>
+          <o:Company>HASSOUNEH CO</o:Company>
+          <o:Lines>14</o:Lines>
+          <o:Paragraphs>4</o:Paragraphs>
+          <o:CharactersWithSpaces>2061</o:CharactersWithSpaces>
+          <o:Version>11.5606</o:Version>
+        </o:DocumentProperties>
+      </xml><!
+    [endif]-->
+    <!--[if gte mso 9
+      ]><xml>
+        <w:WordDocument>
+          <w:GrammarState>Clean</w:GrammarState>
+          <w:PunctuationKerning />
+          <w:ValidateAgainstSchemas />
+          <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+          <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+          <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+          <w:Compatibility>
+            <w:BreakWrappedTables />
+            <w:SnapToGridInCell />
+            <w:WrapTextWithPunct />
+            <w:UseAsianBreakRules />
+            <w:DontGrowAutofit />
+          </w:Compatibility>
+          <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+        </w:WordDocument>
+      </xml><!
+    [endif]-->
+    <!--[if gte mso 9
+      ]><xml>
+        <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+        </w:LatentStyles> </xml
+    ><![endif]-->
+    <style>
+      <!--
+       /* Style Definitions */
+       p.MsoNormal, li.MsoNormal, div.MsoNormal
+      	{mso-style-parent:"";
+      	margin:0cm;
+      	margin-bottom:.0001pt;
+      	mso-pagination:widow-orphan;
+      	font-size:12.0pt;
+      	font-family:"Times New Roman";
+      	mso-fareast-font-family:"Times New Roman";}
+      p.table-para, li.table-para, div.table-para
+      	{mso-style-name:table-para;
+      	mso-margin-top-alt:auto;
+      	margin-right:0cm;
+      	mso-margin-bottom-alt:auto;
+      	margin-left:0cm;
+      	mso-pagination:widow-orphan;
+      	font-size:12.0pt;
+      	font-family:"Times New Roman";
+      	mso-fareast-font-family:"Times New Roman";}
+      span.fixed
+      	{mso-style-name:fixed;}
+      span.GramE
+      	{mso-style-name:"";
+      	mso-gram-e:yes;}
+      @page Section1
+      	{size:612.0pt 792.0pt;
+      	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+      	mso-header-margin:36.0pt;
+      	mso-footer-margin:36.0pt;
+      	mso-paper-source:0;}
+      div.Section1
+      	{page:Section1;}
+      -->
+    </style>
+    <!--[if gte mso 10]>
+      <style>
+        /* Style Definitions */
+        table.MsoNormalTable {
+          mso-style-name: "Table Normal";
+          mso-tstyle-rowband-size: 0;
+          mso-tstyle-colband-size: 0;
+          mso-style-noshow: yes;
+          mso-style-parent: "";
+          mso-padding-alt: 0cm 5.4pt 0cm 5.4pt;
+          mso-para-margin: 0cm;
+          mso-para-margin-bottom: 0.0001pt;
+          mso-pagination: widow-orphan;
+          font-size: 10pt;
+          font-family: "Times New Roman";
+          mso-ansi-language: #0400;
+          mso-fareast-language: #0400;
+          mso-bidi-language: #0400;
+        }
+      </style>
+    <![endif]-->
+  </head>
+
+  <body lang="EN-US" style="tab-interval: 36pt">
+    <div class="Section1">
+      <table
+        class="MsoNormalTable"
+        border="1"
+        cellpadding="0"
+        style="mso-cellspacing: 1.5pt"
+      >
+        <thead>
+          <tr style="mso-yfti-irow: 0; mso-yfti-firstrow: yes">
+            <td valign="top" style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="table-para">
+                <b>Array <o:p></o:p></b>
+              </p>
+            </td>
+            <td valign="top" style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="table-para">
+                <b>Description <o:p></o:p></b>
+              </p>
+            </td>
+          </tr>
+        </thead>
+        <tr style="mso-yfti-irow: 1">
+          <td valign="top" style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+            <p class="table-para">
+              <span class="fixed">$GLOBALS</span> <o:p></o:p>
+            </p>
+          </td>
+          <td valign="top" style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+            <p class="table-para">
+              Has a reference to every variable that has global scope in a PHP
+              program. Many of the variables in it are also in other superglobal
+              arrays<o:p></o:p>
+            </p>
+          </td>
+        </tr>
+        <tr style="mso-yfti-irow: 2">
+          <td valign="top" style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+            <p class="table-para">
+              <span class="fixed">$_SERVER</span> <o:p></o:p>
+            </p>
+          </td>
+          <td valign="top" style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+            <p class="table-para">
+              Includes everything sent by server in the HTTP response, such as
+              the name of the currently executing script, server name, version
+              of HTTP, remote IP address, and so on. Although most Web server
+              software produces the same server variables, not all do, and not
+              all server variables necessarily have data in them<o:p></o:p>
+            </p>
+          </td>
+        </tr>
+        <tr style="mso-yfti-irow: 3">
+          <td valign="top" style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+            <p class="table-para">
+              <span class="fixed">$_GET</span> <o:p></o:p>
+            </p>
+          </td>
+          <td valign="top" style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+            <p class="table-para">
+              Contains all the querystring variables that were attached to the
+              URL, or produced as a result of using the
+              <span class="fixed">GET</span> method<o:p></o:p>
+            </p>
+          </td>
+        </tr>
+        <tr style="mso-yfti-irow: 4">
+          <td valign="top" style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+            <p class="table-para">
+              <span class="fixed">$_POST</span> <o:p></o:p>
+            </p>
+          </td>
+          <td valign="top" style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+            <p class="table-para">
+              Contains all the submitted form variables and their data. You use
+              variables from the <span class="fixed">$_POST</span> or
+              <span class="fixed">$_REQUEST</span> arrays extensively in most of
+              your PHP programs. For example, to make use of a username or
+              password (or any other data) submitted as part of a form, you'll
+              use PHP variables from the
+              <span class="fixed">$_REQUEST</span> array<o:p></o:p>
+            </p>
+          </td>
+        </tr>
+        <tr style="mso-yfti-irow: 5">
+          <td valign="top" style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+            <p class="table-para">
+              <span class="fixed">$_COOKIE</span> <o:p></o:p>
+            </p>
+          </td>
+          <td valign="top" style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+            <p class="table-para">
+              Contains all cookies sent to the server by the browser. They are
+              turned into variables you can read from this array, and you can
+              write cookies to the user's browser using the
+              <span class="GramE"><span class="fixed">setcookie(</span></span
+              ><span class="fixed">)</span> function. Cookies provide a means of
+              identifying a user across page requests (or beyond, depending upon
+              when the cookie expires) and are often used automatically in
+              session handling<o:p></o:p>
+            </p>
+          </td>
+        </tr>
+        <tr style="mso-yfti-irow: 6">
+          <td valign="top" style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+            <p class="table-para">
+              <span class="fixed">$_FILES</span> <o:p></o:p>
+            </p>
+          </td>
+          <td valign="top" style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+            <p class="table-para">
+              Contains any items uploaded to the server when the
+              <span class="fixed">POST</span> method is used. It's different
+              from the <span class="fixed">$_POST</span> array because it
+              specifically contains items uploaded (such as an uploaded image
+              file), not the contents of submitted form fields<o:p></o:p>
+            </p>
+          </td>
+        </tr>
+        <tr style="mso-yfti-irow: 7">
+          <td valign="top" style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+            <p class="table-para">
+              <span class="fixed">$_ENV</span> <o:p></o:p>
+            </p>
+          </td>
+          <td valign="top" style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+            <p class="table-para">
+              Contains data about the environment the server and PHP are
+              operating in, such as the computer name, operating system, and
+              system drive<o:p></o:p>
+            </p>
+          </td>
+        </tr>
+        <tr style="mso-yfti-irow: 8">
+          <td valign="top" style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+            <p class="table-para">
+              <span class="fixed">$_REQUEST</span> <o:p></o:p>
+            </p>
+          </td>
+          <td valign="top" style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+            <p class="table-para">
+              Contains the contents of the <span class="fixed">$_GET</span>,
+              <span class="fixed">$_POST</span>, and
+              <span class="fixed">$COOKIE</span> arrays, all in one<o:p></o:p>
+            </p>
+          </td>
+        </tr>
+        <tr style="mso-yfti-irow: 9; mso-yfti-lastrow: yes">
+          <td valign="top" style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+            <p class="table-para">
+              <span class="fixed">$_SESSION</span> <o:p></o:p>
+            </p>
+          </td>
+          <td valign="top" style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+            <p class="table-para">
+              Contains all variables that are currently registered as session
+              variables. Because you have programmatic control over the
+              variables registered in the session, the contents of this array at
+              any given moment depend on what your program does and whether you
+              use sessions<o:p></o:p>
+            </p>
+          </td>
+        </tr>
+      </table>
+
+      <p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+    </div>
+  </body>
+</html>

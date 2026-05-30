@@ -1,0 +1,144 @@
+<!doctype html>
+
+<!-- Section index -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hassonah Course Material</title>
+    <style>
+      :root {
+        --bg: #f6f7f9;
+        --panel: #fff;
+        --text: #20242a;
+        --muted: #667085;
+        --line: #d8dee8;
+        --accent: #1769aa;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: Arial, Tahoma, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+      }
+      main {
+        width: min(1080px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 40px 0;
+      }
+      header {
+        margin-bottom: 24px;
+        padding-bottom: 18px;
+        border-bottom: 1px solid var(--line);
+      }
+      h1 {
+        margin: 0 0 8px;
+        font-size: clamp(28px, 4vw, 42px);
+        letter-spacing: 0;
+      }
+      p {
+        margin: 0;
+        color: var(--muted);
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 14px;
+      }
+      .topic {
+        display: block;
+        min-height: 156px;
+        padding: 18px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--panel);
+        color: inherit;
+        text-decoration: none;
+      }
+      .topic:hover,
+      .topic:focus {
+        border-color: var(--accent);
+        outline: 2px solid transparent;
+      }
+      .number {
+        display: inline-block;
+        margin-bottom: 10px;
+        color: var(--accent);
+        font-weight: 700;
+        font-size: 14px;
+      }
+      h2 {
+        margin: 0 0 8px;
+        font-size: 20px;
+        letter-spacing: 0;
+      }
+      .path {
+        direction: ltr;
+        display: inline-block;
+        margin-top: 14px;
+        color: var(--muted);
+        font-family: Consolas, monospace;
+        font-size: 13px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Hassonah Course Material</h1>
+        <p>
+          The material is organized by topic, and each section has a clear
+          sub-index.
+        </p>
+      </header>
+
+      <section class="grid" aria-label="Course topics">
+        <a class="topic" href="01-course-pdfs/">
+          <span class="number">01</span>
+          <h2>Course PDFs</h2>
+          <p>Lecture files grouped by chapter.</p>
+          <span class="path">01-course-pdfs/</span>
+        </a>
+
+        <a class="topic" href="02-html/">
+          <span class="number">02</span>
+          <h2>HTML</h2>
+          <p>Chapter 3 examples with their images and CSS files.</p>
+          <span class="path">02-html/</span>
+        </a>
+
+        <a class="topic" href="03-php-basics/">
+          <span class="number">03</span>
+          <h2>PHP Basics</h2>
+          <p>Syntax, arrays, basic forms, and OOP examples.</p>
+          <span class="path">03-php-basics/</span>
+        </a>
+
+        <a class="topic" href="04-php-forms/">
+          <span class="number">04</span>
+          <h2>PHP Forms</h2>
+          <p>Form handling, uploads, redirects, and form controls.</p>
+          <span class="path">04-php-forms/</span>
+        </a>
+
+        <a class="topic" href="05-sessions-and-cookies/">
+          <span class="number">05</span>
+          <h2>Sessions & Cookies</h2>
+          <p>Sessions, cookies, JSON cookies, and login-session examples.</p>
+          <span class="path">05-sessions-and-cookies/</span>
+        </a>
+
+        <a class="topic" href="06-database/">
+          <span class="number">06</span>
+          <h2>Database</h2>
+          <p>MySQL queries, insert/fetch examples, and the user manager.</p>
+          <span class="path">06-database/</span>
+        </a>
+      </section>
+    </main>
+  </body>
+</html>

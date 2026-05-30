@@ -1,0 +1,25 @@
+<!-- PHP array or form example -->
+<html>
+  <head>
+    <title>A Sample Form with two submit buttons</title>
+  </head>
+
+  <body>
+    <h2>A Sample Form Using POST sending two submit button</h2>
+
+    <form action="process.php" method="post">
+      <input type="text" name="item" value="256MB SIMM" /><br />
+      <input type="submit" name="action" value="add" />
+      <input type="submit" name="action" value="delete" />
+    </form>
+    <details>
+      <p>
+        we have to buttons have the same name which is action. becuase when you
+        send the form data, you send it either by press on add or delete. So the
+        user make only one action, therefore if the user clicked on add button
+        action=add is added to query string and delete value will not be sent
+        becuase it has not been chosen by the user
+      </p>
+    </details>
+  </body>
+</html>
