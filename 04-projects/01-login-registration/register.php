@@ -88,18 +88,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
 
-<main style="max-width:420px;margin:48px auto;padding:18px;background:#fff;border-radius:8px">
+<main class="page form-page">
 
     <h2>Register</h2>
 
     <?php if ($success): ?>
-        <div style="background:#ecfdf5;padding:10px;border-left:4px solid #10b981">
+        <div class="alert alert-success">
             <?php echo $success; ?>
         </div>
     <?php endif; ?>
 
     <?php if (!empty($errors)): ?>
-        <div style="background:#fff7ed;padding:10px;border-left:4px solid #f59e0b">
+        <div class="alert alert-error">
             <ul>
                 <?php foreach ($errors as $e): ?>
                     <li><?php echo htmlspecialchars($e); ?></li>
@@ -108,29 +108,33 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
     <?php endif; ?>
 
-    <form method="post" action="register.php">
+    <form method="post" action="register.php" class="card-form">
 
-        <label>First name</label><br>
-        <input name="fname" value="<?php echo htmlspecialchars($_POST['fname'] ?? ''); ?>" required>
-        <br><br>
+        <label>
+            First name
+            <input name="fname" value="<?php echo htmlspecialchars($_POST['fname'] ?? ''); ?>" required>
+        </label>
 
-        <label>Last name</label><br>
-        <input name="lname" value="<?php echo htmlspecialchars($_POST['lname'] ?? ''); ?>" required>
-        <br><br>
+        <label>
+            Last name
+            <input name="lname" value="<?php echo htmlspecialchars($_POST['lname'] ?? ''); ?>" required>
+        </label>
 
-        <label>Email</label><br>
-        <input name="email" type="email" value="<?php echo htmlspecialchars($_POST['email'] ?? ''); ?>" required>
-        <br><br>
+        <label>
+            Email
+            <input name="email" type="email" value="<?php echo htmlspecialchars($_POST['email'] ?? ''); ?>" required>
+        </label>
 
-        <label>Password</label><br>
-        <input name="password" type="password" required>
-        <br><br>
+        <label>
+            Password
+            <input name="password" type="password" required>
+        </label>
 
         <button type="submit">Register</button>
 
     </form>
 
-    <p>Already have an account? <a href="simple_login.php">Login</a></p>
+    <p>Already have an account? <a class="text-link" href="simple_login.php">Login</a></p>
 
 </main>
 

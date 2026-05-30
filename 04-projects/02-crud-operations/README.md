@@ -1,5 +1,38 @@
 # CRUD Operations
 
+Simple PHP CRUD app for the `users` table.
+
+## Database
+
+Use your local MySQL database settings from `config.php`.
+
+Expected table:
+
+```sql
+CREATE TABLE users (
+	id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	fname VARCHAR(100) NOT NULL,
+	lname VARCHAR(100) NOT NULL,
+	email VARCHAR(255) NOT NULL UNIQUE,
+	password VARCHAR(255) NOT NULL,
+	created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+```
+
+## Files
+
+- `index.php` shows all users.
+- `add.php` inserts a new user.
+- `edit.php` updates an existing user.
+- `delete.php` removes a user.
+- `config.php` stores database connection settings.
+- `style.css` styles the pages.
+
+## Run
+
+Open the folder in your local server and start from `index.php`.
+# CRUD Operations
+
 This project is for learning how to create, read, update, and delete records with PHP and MySQL.
 
 ## Planned Files

@@ -14,6 +14,11 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
     exit;
 }
 
+if (!empty($_SESSION['user_id'])) {
+    header('Location: ../02-crud-operations/index.php');
+    exit;
+}
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $email = trim($_POST['email'] ?? '');
@@ -61,7 +66,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         $_SESSION['user_id'] = $user['id'];
                         $_SESSION['user_name'] = trim($user['fname'] . ' ' . $user['lname']);
 
-                        $welcome = 'Welcome, ' . htmlspecialchars($_SESSION['user_name']) . '!';
+                        header('Location: ../02-crud-operations/index.php');
+                        exit;
 
                     } else {
                         $errors[] = 'Invalid email or password.';
@@ -86,37 +92,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Login</title>
     <link rel="stylesheet" href="style.css">
-
-    <style>
-        .box {
-            max-width: 420px;
-            margin: 48px auto;
-            padding: 18px;
-            background: #fff;
-            border-radius: 8px;
-        }
-
-        .note {
-            background: #fff7ed;
-            padding: 10px;
-            border-left: 4px solid #f59e0b;
-        }
-
-        .success {
-            background: #ecfdf5;
-            padding: 10px;
-            border-left: 4px solid #10b981;
-        }
-    </style>
 </head>
 
 <body>
 
-<main class="box">
+<main class="page form-page">
 
     <?php if (!empty($welcome) || !empty($_SESSION['user_name'])): ?>
 
-        <div class="success">
+        <div class="alert alert-success">
             <?php
                 echo $welcome ?: 'Welcome, ' . htmlspecialchars($_SESSION['user_name']) . '!';
             ?>
@@ -131,7 +115,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <h2>Login</h2>
 
         <?php if (!empty($errors)): ?>
-            <div class="note">
+            <div class="alert alert-error">
                 <ul>
                     <?php foreach ($errors as $e): ?>
                         <li><?php echo htmlspecialchars($e); ?></li>
@@ -140,27 +124,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
         <?php endif; ?>
 
-        <form method="post" action="simple_login.php">
+        <form method="post" action="simple_login.php" class="card-form">
 
-            <label>Email</label><br>
-            <input 
-                name="email" 
-                type="email" 
-                value="<?php echo htmlspecialchars($_POST['email'] ?? ''); ?>" 
-                required
-            >
-            <br><br>
+            <label>
+                Email
+                <input 
+                    name="email" 
+                    type="email" 
+                    value="<?php echo htmlspecialchars($_POST['email'] ?? ''); ?>" 
+                    required
+                >
+            </label>
 
-            <label>Password</label><br>
-            <input name="password" type="password" required>
-            <br><br>
+            <label>
+                Password
+                <input name="password" type="password" required>
+            </label>
 
             <button type="submit">Login</button>
 
         </form>
 
         <p>
-            <a href="register.php">Register</a>
+            <a class="text-link" href="register.php">Register</a>
         </p>
 
     <?php endif; ?>
