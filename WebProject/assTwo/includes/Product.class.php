@@ -155,7 +155,7 @@ class Product
         }
 
         $html = '<tr>';
-        $html .= '<td><img src="images/' . $this->h($this->defaultPhoto) . '" alt="' . $this->h($this->productName) . '" width="90" height="70"></td>';
+        $html .= '<td><img src="assets/images/' . $this->h($this->defaultPhoto) . '" alt="' . $this->h($this->productName) . '" width="90" height="70"></td>';
         $html .= '<td><a href="view.php?id=' . $id . '">' . $id . '</a></td>';
         $html .= '<td>' . $this->h($this->productName) . '</td>';
         $html .= '<td>' . $this->h($this->category) . '</td>';
@@ -188,7 +188,7 @@ class Product
         $html .= '<article>';
         $html .= '<h2>' . $this->h($this->productName) . '</h2>';
         $html .= '<figure>';
-        $html .= '<img src="images/' . $this->h($this->defaultPhoto) . '" alt="' . $this->h($this->productName) . '" width="250" height="180">';
+        $html .= '<img src="assets/images/' . $this->h($this->defaultPhoto) . '" alt="' . $this->h($this->productName) . '" width="250" height="180">';
         $html .= '</figure>';
         $html .= '<form method="post" action="edit.php">';
         $html .= '<input type="hidden" name="product_id" value="' . $id . '">';

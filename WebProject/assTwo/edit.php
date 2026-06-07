@@ -25,7 +25,7 @@ if ($_SESSION['role'] !== 'Employee') {
     exit;
 }
 
-require_once('dbconfig.inc.php');
+require_once('includes/dbconfig.inc.php');
 
 function h($value)
 {
@@ -124,13 +124,13 @@ if ($_SESSION['role'] === 'Employee' && $product && $_SERVER['REQUEST_METHOD'] =
     if (count($errors) === 0) {
         // Replace only the uploaded photos.
         if (new_jpg('photo1')) {
-            move_uploaded_file($_FILES['photo1']['tmp_name'], 'images/' . $photo1);
+            move_uploaded_file($_FILES['photo1']['tmp_name'], 'assets/images/' . $photo1);
         }
         if (new_jpg('photo2')) {
-            move_uploaded_file($_FILES['photo2']['tmp_name'], 'images/' . $photo2);
+            move_uploaded_file($_FILES['photo2']['tmp_name'], 'assets/images/' . $photo2);
         }
         if (new_jpg('photo3')) {
-            move_uploaded_file($_FILES['photo3']['tmp_name'], 'images/' . $photo3);
+            move_uploaded_file($_FILES['photo3']['tmp_name'], 'assets/images/' . $photo3);
         }
 
         $photos = array('1' => $photo1, '2' => $photo2, '3' => $photo3);
@@ -168,7 +168,7 @@ if ($_SESSION['role'] === 'Employee' && $product && $_SERVER['REQUEST_METHOD'] =
     <title>Edit Product</title>
 </head>
 <body>
-<?php require_once('header.inc.php'); ?>
+<?php require_once('includes/header.inc.php'); ?>
 <main>
     <section>
         <h2>Edit Product</h2>
@@ -216,6 +216,6 @@ if ($_SESSION['role'] === 'Employee' && $product && $_SERVER['REQUEST_METHOD'] =
         <?php } ?>
     </section>
 </main>
-<?php require_once('footer.inc.php'); ?>
+<?php require_once('includes/footer.inc.php'); ?>
 </body>
 </html>

@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once('dbconfig.inc.php');
+require_once('includes/dbconfig.inc.php');
 
 function h($value)
 {
@@ -162,7 +162,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <title>Register</title>
 </head>
 <body>
-<?php require_once('header.inc.php'); ?>
+<?php require_once('includes/header.inc.php'); ?>
 <main>
 <?php if ($successCode !== '') { ?>
     <section>
@@ -215,6 +215,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </section>
 <?php } ?>
 </main>
-<?php require_once('footer.inc.php'); ?>
+<?php require_once('includes/footer.inc.php'); ?>
 </body>
 </html>

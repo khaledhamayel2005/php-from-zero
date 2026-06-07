@@ -8,7 +8,7 @@ session_start();
     <title>Qadyate Store Assignment 2</title>
 </head>
 <body>
-<?php require_once('header.inc.php'); ?>
+<?php require_once('includes/header.inc.php'); ?>
 <main>
     <section>
         <h2>Assignment 2 Index</h2>
@@ -50,6 +50,6 @@ session_start();
         </table>
     </section>
 </main>
-<?php require_once('footer.inc.php'); ?>
+<?php require_once('includes/footer.inc.php'); ?>
 </body>
 </html>

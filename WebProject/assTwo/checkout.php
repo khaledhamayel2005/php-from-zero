@@ -13,7 +13,7 @@ if (!isset($_SESSION['basket']) || !is_array($_SESSION['basket']) || count($_SES
     exit;
 }
 
-require_once('dbconfig.inc.php');
+require_once('includes/dbconfig.inc.php');
 
 function h($value)
 {
@@ -154,7 +154,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <title>Checkout</title>
 </head>
 <body>
-<?php require_once('header.inc.php'); ?>
+<?php require_once('includes/header.inc.php'); ?>
 <main>
 <?php if ($confirmed) { ?>
     <section>
@@ -185,7 +185,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <?php foreach ($basket as $item) { ?>
                 <?php $line = (float)$item['unit_price'] * (int)$item['quantity']; ?>
                 <tr>
-                    <td><img src="images/<?php echo h($item['default_photo']); ?>" alt="<?php echo h($item['product_name']); ?>" width="90" height="70"></td>
+                    <td><img src="assets/images/<?php echo h($item['default_photo']); ?>" alt="<?php echo h($item['product_name']); ?>" width="90" height="70"></td>
                     <td><?php echo h($item['product_name']); ?></td>
                     <td><?php echo h(number_format((float)$item['unit_price'], 2)); ?></td>
                     <td><?php echo h($item['quantity']); ?></td>
@@ -227,6 +227,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </section>
 <?php } ?>
 </main>
-<?php require_once('footer.inc.php'); ?>
+<?php require_once('includes/footer.inc.php'); ?>
 </body>
 </html>

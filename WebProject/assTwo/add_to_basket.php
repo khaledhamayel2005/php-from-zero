@@ -19,7 +19,7 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
     exit;
 }
 
-require_once('dbconfig.inc.php');
+require_once('includes/dbconfig.inc.php');
 
 function h($value)
 {
@@ -93,7 +93,7 @@ if ($_SESSION['role'] === 'Customer' && $product && $_SERVER['REQUEST_METHOD'] =
     <title>Add to Basket</title>
 </head>
 <body>
-<?php require_once('header.inc.php'); ?>
+<?php require_once('includes/header.inc.php'); ?>
 <main>
     <section>
         <h2>Add to Basket</h2>
@@ -119,6 +119,6 @@ if ($_SESSION['role'] === 'Customer' && $product && $_SERVER['REQUEST_METHOD'] =
         <?php } ?>
     </section>
 </main>
-<?php require_once('footer.inc.php'); ?>
+<?php require_once('includes/footer.inc.php'); ?>
 </body>
 </html>

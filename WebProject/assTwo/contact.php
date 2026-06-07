@@ -8,7 +8,7 @@ session_start();
     <title>Contact Us</title>
 </head>
 <body>
-<?php require_once('header.inc.php'); ?>
+<?php require_once('includes/header.inc.php'); ?>
 <main>
     <section>
         <h2>Contact Us</h2>
@@ -23,6 +23,6 @@ session_start();
         </address>
     </section>
 </main>
-<?php require_once('footer.inc.php'); ?>
+<?php require_once('includes/footer.inc.php'); ?>
 </body>
 </html>

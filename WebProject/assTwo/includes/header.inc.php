@@ -1,7 +1,7 @@
 <header>
     <h1>Qadyate Store</h1>
     <figure>
-        <img src="images/logo.jpeg" alt="Qadyate Store Logo" width="120" height="80">
+        <img src="assets/images/logo.jpeg" alt="Qadyate Store Logo" width="120" height="80">
     </figure>
     <?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) { ?>
         <p>

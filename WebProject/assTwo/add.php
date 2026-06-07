@@ -15,7 +15,7 @@ if ($_SESSION['role'] !== 'Employee') {
     exit;
 }
 
-require_once('dbconfig.inc.php');
+require_once('includes/dbconfig.inc.php');
 
 function h($value)
 {
@@ -125,13 +125,13 @@ if ($_SESSION['role'] === 'Employee' && $_SERVER['REQUEST_METHOD'] === 'POST') {
             $photos = array('1' => $photo1, '2' => $photo2, '3' => $photo3);
             $defPhoto = $photos[$defNo];
 
-            if (!move_uploaded_file($_FILES['photo1']['tmp_name'], 'images/' . $photo1)) {
+            if (!move_uploaded_file($_FILES['photo1']['tmp_name'], 'assets/images/' . $photo1)) {
                 $errors[] = 'Could not save Photo 1.';
             }
-            if (!move_uploaded_file($_FILES['photo2']['tmp_name'], 'images/' . $photo2)) {
+            if (!move_uploaded_file($_FILES['photo2']['tmp_name'], 'assets/images/' . $photo2)) {
                 $errors[] = 'Could not save Photo 2.';
             }
-            if (!move_uploaded_file($_FILES['photo3']['tmp_name'], 'images/' . $photo3)) {
+            if (!move_uploaded_file($_FILES['photo3']['tmp_name'], 'assets/images/' . $photo3)) {
                 $errors[] = 'Could not save Photo 3.';
             }
 
@@ -172,7 +172,7 @@ if ($_SESSION['role'] === 'Employee' && $_SERVER['REQUEST_METHOD'] === 'POST') {
     <title>Add Product</title>
 </head>
 <body>
-<?php require_once('header.inc.php'); ?>
+<?php require_once('includes/header.inc.php'); ?>
 <main>
 <?php if ($newId !== '') { ?>
     <section>
@@ -232,6 +232,6 @@ if ($_SESSION['role'] === 'Employee' && $_SERVER['REQUEST_METHOD'] === 'POST') {
     </section>
 <?php } ?>
 </main>
-<?php require_once('footer.inc.php'); ?>
+<?php require_once('includes/footer.inc.php'); ?>
 </body>
 </html>

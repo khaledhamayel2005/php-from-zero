@@ -30,7 +30,7 @@ $total = 0;
     <title>Shopping Basket</title>
 </head>
 <body>
-<?php require_once('header.inc.php'); ?>
+<?php require_once('includes/header.inc.php'); ?>
 <main>
     <section>
         <h2>Shopping Basket</h2>
@@ -53,7 +53,7 @@ $total = 0;
                     $total = $total + $lineTotal;
                     ?>
                     <tr>
-                        <td><img src="images/<?php echo h($item['default_photo']); ?>" alt="<?php echo h($item['product_name']); ?>" width="90" height="70"></td>
+                        <td><img src="assets/images/<?php echo h($item['default_photo']); ?>" alt="<?php echo h($item['product_name']); ?>" width="90" height="70"></td>
                         <td><?php echo h($item['product_name']); ?></td>
                         <td><?php echo h(number_format((float)$item['unit_price'], 2)); ?></td>
                         <td><?php echo h($item['quantity']); ?></td>
@@ -68,6 +68,6 @@ $total = 0;
         <?php } ?>
     </section>
 </main>
-<?php require_once('footer.inc.php'); ?>
+<?php require_once('includes/footer.inc.php'); ?>
 </body>
 </html>

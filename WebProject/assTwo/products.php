@@ -1,7 +1,7 @@
 <?php
 session_start();
-require_once('dbconfig.inc.php');
-require_once('Product.class.php');
+require_once('includes/dbconfig.inc.php');
+require_once('includes/Product.class.php');
 
 function h($value)
 {
@@ -243,7 +243,7 @@ $productStatement->execute();
     <title>Products</title>
 </head>
 <body>
-<?php require_once('header.inc.php'); ?>
+<?php require_once('includes/header.inc.php'); ?>
 <main>
     <section>
         <h2>Products</h2>
@@ -326,6 +326,6 @@ $productStatement->execute();
         </nav>
     </section>
 </main>
-<?php require_once('footer.inc.php'); ?>
+<?php require_once('includes/footer.inc.php'); ?>
 </body>
 </html>

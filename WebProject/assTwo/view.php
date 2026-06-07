@@ -1,7 +1,7 @@
 <?php
 session_start();
-require_once('dbconfig.inc.php');
-require_once('Product.class.php');
+require_once('includes/dbconfig.inc.php');
+require_once('includes/Product.class.php');
 
 function h($value)
 {
@@ -42,7 +42,7 @@ if (!isset($_GET['id']) || trim($_GET['id']) === '' || !ctype_digit($_GET['id'])
     <title>View Product</title>
 </head>
 <body>
-<?php require_once('header.inc.php'); ?>
+<?php require_once('includes/header.inc.php'); ?>
 <?php
 if ($error !== '') {
     echo '<main><section><h2>Product Error</h2><p>' . h($error) . '</p><p><a href="products.php">Back to Products</a></p></section></main>';
@@ -50,6 +50,6 @@ if ($error !== '') {
     echo $product->displayProductPage();
 }
 ?>
-<?php require_once('footer.inc.php'); ?>
+<?php require_once('includes/footer.inc.php'); ?>
 </body>
 </html>
