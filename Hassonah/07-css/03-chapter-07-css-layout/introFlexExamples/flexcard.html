@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Flex Example</title>
+  <style>
+
+nav ul {
+display: flex;
+align-items: center;
+justify-content: stretch;
+}
+nav li {
+flex: 1 1 auto;
+padding: 0.5em;
+}
+.right {
+flex-basis: 10em;
+text-align: right;
+}
+nav  li { list-style-type: none; margin: 0.25em 0; }
+nav li a:link {
+    color: #F48FB1;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #f0f4fb;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  width: 220px;
+  font-family: Arial, sans-serif;
+}
+
+.content {
+/*
+  display: flex;
+  flex-direction: column;*/
+  flex: 1 1 auto;
+  align-items: center;
+  padding: 0;
+}
+
+.content img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.content h3 {
+  margin: 0;
+  padding: 12px 0;
+  font-size: 16px;
+  text-align: center;
+  color: #333;
+  background: #fff;
+  width: 100%;
+}
+
+footer {
+  background-color: #1a3d8f;
+  text-align: center;
+}
+
+footer a {
+  display: inline-block;
+  color: white;
+  padding: 10px 0;
+  width: 100%;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+
+</style>
+</head>
+<body>
+<nav>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">Products</a></li>
+<li><a href="#">Services</a></li>
+<li><a href="#">About</a></li>
+<li class="right"><img src="./images/menu.png" /></li>
+</ul>
+</nav>
+<div class="card">
+  <div class="content">
+    <img src="./images/300.jpg" alt="Albert Hall" />
+    <h3>Albert Hall</h3>
+  </div>
+  <footer>
+    <a href="#">View</a>
+  </footer>
+</div>
+
+</body>
+</html>

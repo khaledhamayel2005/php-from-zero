@@ -1,0 +1,23 @@
+Mock practical exam without database:
+
+Build a course registration page.
+
+Requirements:
+
+1. Use `session_start`.
+2. Store courses in a PHP array.
+3. Show a POST form with:
+   - student name
+   - level radio buttons: regular or employee
+   - course checkboxes
+4. Validate:
+   - student name is required
+   - at least one course must be selected
+5. Calculate:
+   - total credits
+   - total fees
+   - 20% discount if level is employee
+6. Save each successful registration in `$_SESSION["history"]`.
+7. Display the history in a table.
+8. Add a clear history link.
+

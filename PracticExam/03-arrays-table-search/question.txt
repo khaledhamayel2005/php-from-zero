@@ -1,0 +1,14 @@
+Exam task:
+
+Create a products page using a PHP array.
+
+Requirements:
+
+1. Store at least 5 products in an array.
+2. Each product must have name, category, price, and quantity.
+3. Create a GET form with:
+   - category select list
+   - minimum price input
+4. Display matching products in an HTML table.
+5. Display total quantity and total value for the matching products.
+

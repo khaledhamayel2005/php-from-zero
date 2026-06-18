@@ -1,0 +1,21 @@
+Exam task:
+
+Create a self-processing PHP page that receives a student name and mark.
+
+Requirements:
+
+1. Use method POST.
+2. Validate that the student name is not empty.
+3. Validate that the mark is numeric and between 0 and 100.
+4. Print validation errors if the input is invalid.
+5. If valid, print:
+   - student name
+   - mark
+   - grade
+6. Grade rules:
+   - 90 and above: A
+   - 80 to 89: B
+   - 70 to 79: C
+   - 60 to 69: D
+   - below 60: Fail
+

@@ -1,0 +1,17 @@
+Exam task:
+
+Create a simple PHP class and display objects.
+
+Requirements:
+
+1. Create a class named `Course`.
+2. The class has public properties:
+   - code
+   - title
+   - credits
+   - type
+3. Add a constructor.
+4. Add a method named `isLab()` that returns true if type is "lab".
+5. Create at least 4 Course objects.
+6. Display the objects in an HTML table.
+

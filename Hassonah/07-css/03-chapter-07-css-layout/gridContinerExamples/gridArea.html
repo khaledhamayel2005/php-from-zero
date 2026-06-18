@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.yellow {background-color: yellow;
+        text-align: center;
+        border: 3px solid blue;}
+
+.orange {background-color: orange;
+        text-align: center;
+        border: 3px solid blue;}
+
+.cyan {background-color: cyan;
+        text-align: center;
+        border: 3px solid blue;}
+.container1 {
+border: 3px double black;
+padding: 10 px;
+margin: 10px;
+grid-gap: 10px;
+display: grid;
+grid-template-rows: 100px 150px 100px;
+grid-template-columns: 75px 1fr 1fr 1fr 1fr;
+grid-template-areas: ". a1 a2 a3 a4"
+                      "b1 b2 b2 b2 b3"
+                      "b1 c1 c2 c2 c2";
+}
+.a1 { grid-area: a1; }
+.a2 { grid-area: a2; }
+.a3 { grid-area: a3; }
+.a4 { grid-area: a4; }
+.b1 { grid-area: b1; }
+.b2 { grid-area: b2; }
+.b3 { grid-area: b3; }
+.c1 { grid-area: c1; }
+.c2 { grid-area: c2; }
+.container2 {
+border: 3px double black;
+padding: 10 px;
+margin: 10px;
+grid-gap: 10px;
+display: grid;
+grid-template-rows: 100px 150px 100px;
+grid-template-columns: 75px 1fr 1fr 1fr 1fr;
+grid-template-areas:  "a1 a2 a3 a4 b3"
+                      "b1 b2 b2 b2 b3"
+                      "b1 c1 c2 c2 b3";
+}
+.container3 {
+border: 3px double black;
+padding: 10 px;
+margin: 10px;
+grid-gap: 10px;
+display: grid;
+grid-template-rows: 100px 150px 100px;
+grid-template-columns: 75px 1fr 1fr 1fr 1fr;
+grid-template-areas:  "b1 a2 a3 c2 a4"
+                      "b1 b2 c1 c2 b3"
+                      "a1 a1 c1 .. b3";
+}
+</style>
+</style>
+</head>
+<body>
+  <h3>container 1</h3>
+<section class="container1">
+<div class="yellow a1">A1</div>
+<div class="yellow a2">A2</div>
+<div class="yellow a3">A3</div>
+<div class="yellow a4">A4</div>
+<div class="orange b1">B1</div>
+<div class="orange b2">B2</div>
+<div class="orange b3">B3</div>
+<div class="cyan c1">C1</div>
+<div class="cyan c2">C2</div>
+</section>
+<h3>container 2</h3>
+<section class="container2">
+<div class="yellow a1">A1</div>
+<div class="yellow a2">A2</div>
+<div class="yellow a3">A3</div>
+<div class="yellow a4">A4</div>
+<div class="orange b1">B1</div>
+<div class="orange b2">B2</div>
+<div class="orange b3">B3</div>
+<div class="cyan c1">C1</div>
+<div class="cyan c2">C2</div>
+</section>
+<h3>container 3</h3>
+<section class="container3">
+<div class="yellow a1">A1</div>
+<div class="yellow a2">A2</div>
+<div class="yellow a3">A3</div>
+<div class="yellow a4">A4</div>
+<div class="orange b1">B1</div>
+<div class="orange b2">B2</div>
+<div class="orange b3">B3</div>
+<div class="cyan c1">C1</div>
+<div class="cyan c2">C2</div>
+</section>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variable Scope Demo</title>
+    <style>
+        /* GLOBAL SCOPE - Available everywhere */
+        :root {
+            --global-color: #3498db;
+            --global-spacing: 20px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: var(--global-spacing);
+            margin: 0;
+        }
+
+        /* This works - global variable */
+        h1 {
+            color: var(--global-color);
+        }
+
+        /* LOCAL SCOPE - Only available in .box-1 and its children */
+        .box-1 {
+            --local-color: #e74c3c;
+            --local-padding: 30px;
+
+            background-color: var(--local-color);
+            padding: var(--local-padding);
+            margin-bottom: var(--global-spacing);
+            color: white;
+        }
+
+        /* This works - accessing parent's local variable */
+        .box-1 h2 {
+            color: var(--local-color);
+            background: white;
+            padding: 10px;
+            display: inline-block;
+        }
+
+        /* LOCAL SCOPE - Different local variable in .box-2 */
+        .box-2 {
+            --local-color: #2ecc71; /* Same name, different value! */
+            --local-padding: 15px;
+
+            background-color: var(--local-color);
+            padding: var(--local-padding);
+            margin-bottom: var(--global-spacing);
+            color: white;
+        }
+
+        .box-2 h2 {
+            color: var(--local-color);
+            background: white;
+            padding: 10px;
+            display: inline-block;
+        }
+
+        /* This box tries to use local variables from box-1 */
+        .box-3 {
+            background-color:#95a5a6;
+            padding: var(--global-spacing);
+            color: /*var(--local-color);*/ white;
+            margin-bottom: var(--global-spacing);
+        }
+
+        /* OVERRIDING - Local scope overrides global */
+        .box-4 {
+            --global-color: #f39c12; /* Override the global variable locally */
+
+            background-color: white;
+            border: 3px solid var(--global-color);
+            padding: var(--global-spacing);
+            margin-bottom: var(--global-spacing);
+        }
+
+        .box-4 h2 {
+            color: var(--global-color); /* Uses the overridden value */
+        }
+
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            color: #e74c3c;
+        }
+
+        .info {
+            background: #ecf0f1;
+            padding: 15px;
+            border-left: 4px solid var(--global-color);
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Variable Scope Explained</h1>
+
+    <div class="info">
+        <strong>Key Concept:</strong> Variables defined in <code>:root</code> are global.
+        Variables defined in a specific element are only available to that element and its children.
+    </div>
+
+    <!-- Example 1: Local Scope -->
+    <div class="box-1">
+        <h2>Box 1 - Local Scope</h2>
+        <p>This box defines <code>--local-color: red</code></p>
+        <p>The variable is only available inside this box and its children.</p>
+        <p>✓ I can use <code>--local-color</code> here!</p>
+    </div>
+
+    <!-- Example 2: Different Local Scope -->
+    <div class="box-2">
+        <h2>Box 2 - Different Local Scope</h2>
+        <p>This box also defines <code>--local-color: green</code></p>
+        <p>Same variable name, but different value and scope!</p>
+        <p>✓ I can use my own <code>--local-color</code> here!</p>
+    </div>
+
+    <!-- Example 3: Can't Access Other Box's Variables -->
+    <div class="box-3">
+        <h2>Box 3 - Out of Scope</h2>
+        <p>✗ This box CANNOT use <code>--local-color</code> from Box 1 or Box 2</p>
+        <p>✓ But it CAN use <code>--global-color</code> and <code>--global-spacing</code></p>
+        <p>Why? Because global variables are available everywhere!</p>
+    </div>
+
+    <!-- Example 4: Overriding Global Variables -->
+    <div class="box-4">
+        <h2>Box 4 - Overriding Global</h2>
+        <p>This box redefines <code>--global-color</code> locally</p>
+        <p>Inside this box, <code>--global-color</code> is orange (not blue)</p>
+        <p>Outside this box, <code>--global-color</code> is still blue</p>
+        <p>This is called "overriding" or "shadowing"</p>
+    </div>
+
+    <div class="info">
+        <h3>Summary:</h3>
+        <ul>
+            <li><strong>Global (<code>:root</code>):</strong> Available everywhere in the document</li>
+            <li><strong>Local (specific element):</strong> Only available in that element and its children</li>
+            <li><strong>Override:</strong> You can redefine a global variable locally for a specific section</li>
+            <li><strong>Inheritance:</strong> Child elements can access their parent's variables</li>
+        </ul>
+    </div>
+
+    <h2>Think of it like this:</h2>
+    <div class="info">
+        <p><strong>Global variables</strong> are like public announcements - everyone can hear them.</p>
+        <p><strong>Local variables</strong> are like conversations in a room - only people in that room (and smaller rooms inside it) can hear them.</p>
+    </div>
+
+</body>
+</html>

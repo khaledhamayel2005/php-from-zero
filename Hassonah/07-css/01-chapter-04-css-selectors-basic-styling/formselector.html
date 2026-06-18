@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Share Your Travels</title>
+	<style>
+       input  {
+                padding: 2px;
+                margin: 4px;
+                border: 3px solid cyan;
+         }
+        input:focus{
+            background: gray;
+            border: 3px solid blue;
+            color:red;
+        }
+        input:required {
+        background:gold;
+        }
+        
+        .req:after {
+            content: "*";
+            font-weight: bold;
+            color: red;
+            }
+        
+	</style>
+</head>
+<body>
+   <form>
+    <label class = "req">First Name: </label>
+    <input  type ="text" name ="fname" required size="10"/><br/>
+    <label>last Name: </label>
+    <input type ="text" name ="fname"  size="10"/><br/>
+    <input type ="submit" name="add" value="add" /><br/>
+    </form>
+</body>

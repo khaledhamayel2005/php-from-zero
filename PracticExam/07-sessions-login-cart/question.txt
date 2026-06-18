@@ -1,0 +1,14 @@
+Exam task:
+
+Create a session-based login and cart page.
+
+Requirements:
+
+1. Use `session_start()`.
+2. Use a small hardcoded users array.
+3. Store passwords as `md5` values in the array.
+4. Login with user id and password.
+5. After login, show products and let the user add products to a cart.
+6. Store the cart in `$_SESSION`.
+7. Add logout and clear cart actions.
+

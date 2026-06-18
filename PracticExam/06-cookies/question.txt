@@ -1,0 +1,15 @@
+Exam task:
+
+Create a PHP page that stores user preferences in a cookie.
+
+Requirements:
+
+1. Use a form with:
+   - user name
+   - background color
+   - font size
+2. Store the preferences in one JSON cookie.
+3. Read the cookie and apply the preferences when the page loads.
+4. Add a reset link that deletes the cookie.
+5. Use `setcookie` before any HTML output.
+

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Grid Template Areas Demo</title>
+  <style>
+    .container {
+      display: grid;
+      grid-template-areas:
+        'myArea myArea .'
+        'myArea myArea .';
+      grid-template-columns: 100px 100px 100px;
+      grid-template-rows: 100px 100px;
+      gap: 10px;
+      background-color: #ccc;
+      padding: 10px;
+    }
+
+    .main {
+      grid-area: myArea;
+      background-color: lightblue;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .empty {
+      background-color: lightgray;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="main">myArea</div>
+    <div class="empty"></div>
+    <div class="empty"></div>
+  </div>
+
+</body>
+</html>

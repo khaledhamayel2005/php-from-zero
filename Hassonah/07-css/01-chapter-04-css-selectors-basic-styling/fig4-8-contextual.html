@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+       <meta charset="utf-8">
+       <title>Fig 4.4</title>
+        <style>
+            /*descendant selector*/
+            ul a:link {
+                color: blue;
+            }
+            /*descendant selector*/
+            div time { color: red; 
+            }
+            /*child selector*/
+            #main>time {
+                color: purple;
+            }
+            /*adjacent sibling selector*/
+            hr+p {
+                color: green;
+            }
+            /*general sibling selector*/
+            h3~p {
+                color: orange;
+            }
+        </style>
+</head>
+<body>    
+    <nav>
+        <ul>
+            <li><a href="#">Canada</a></li>
+            <li><a href="#">Germany</a></li>
+            <li><a href="#">United States</a></li>
+        </ul>
+        </nav>
+        <div id="main">
+            <time>2019-12-25</time>
+            <hr>
+            <p>By Ricardo on <time>2020-05-23</time></p>
+            <p>Easy on the HDR buddy.</p>
+            <hr>
+            <p>By Susan on <time>2020-11-18</time></p>
+            <p>I love Central Park.</p>
+            <hr>
+            <p>Usage stats are here</p>
+            <h3>Social</h3>
+            <p>Visits: 2300</p>
+            <p>Shares: 5</p>
+        </div>
+        <footer>
+            <ul>
+            <li><a href="#">Home</a> | </li>
+            <li><a href="#">Browse</a> | </li>
+            </ul>
+        </footer>
+</body>
+</html>

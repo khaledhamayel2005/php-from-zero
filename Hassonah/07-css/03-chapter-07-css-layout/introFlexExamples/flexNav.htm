@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Flex Example</title>
+  <style>
+
+nav ul {
+display: flex;
+align-items: center;
+justify-content: stretch;
+}
+nav li {
+flex: 1 1 auto;
+padding: 0.5em;
+}
+.right {
+flex-basis: 10em;
+text-align: right;
+}
+</style>
+</head>
+<body>
+<nav>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">Products</a></li>
+<li><a href="#">Services</a></li>
+<li><a href="#">About</a></li>
+<li class="right"><img src="./images/menu.png" /></li>
+</ul>
+</nav>
+</body>
+</html>

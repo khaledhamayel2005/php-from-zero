@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flexbox Media Example</title>
+  <style>
+    .media {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .media-image {
+      margin-right: 1em;
+      width: 150px; /* optional, for consistent layout */
+      height: auto;
+    }
+
+    .media-body {
+      flex: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="media">
+    <img class="media-image" src="./images/300.jpg" />
+    <div class="media-body">
+      <h2>Fall in Calgary</h2>
+      <p>Nunc nec fermentum dolor...</p>
+      <p>Mauris porta arcu id...</p>
+      <p>Phasellus vel felis purus...</p>
+    </div>
+  </div>
+</body>
+</html>

@@ -10,6 +10,7 @@ The material is organized by topic. Original examples and lecture files were kep
 - `04-php-forms/` - form handling and form-control examples.
 - `05-sessions-and-cookies/` - sessions, cookies, JSON-cookie examples, and login-session examples.
 - `06-database/` - MySQL query examples and user-manager database examples.
+- `07-css/` - CSS chapter examples for selectors, tables/forms, and layout.
 
 ## Browser Entry
 

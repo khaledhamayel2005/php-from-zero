@@ -1,0 +1,19 @@
+Exam task:
+
+Create one HTML/PHP page for a workshop registration form.
+
+Requirements:
+
+1. Use a complete HTML document.
+2. Add a heading and a short paragraph.
+3. Create a form with:
+   - full name text input
+   - email input
+   - major select list
+   - level radio buttons
+   - skills checkboxes
+   - notes textarea
+   - submit and reset buttons
+4. Add a small table that shows the workshop schedule.
+5. Use simple, clean HTML that can be written in Notepad.
+

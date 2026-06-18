@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CSS Variables Example</title>
+  <style>
+    :root {
+      --bg-color-main:/* #431c5d*/ red;
+      --bg-color-secondary: #e05915;
+      --fg-color-main: red #e6e9f0;
+      --radius-boxes: 5px;
+      --padding-boxes: 4px;
+      --fontsize-default: 18px;
+      --shadow-color: rgba(0,0,0,0.22);
+      --dropshadow: 6px 5px 20px 1px var(--shadow-color);
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 20px;
+    }
+
+    header {
+      background-color: var(--bg-color-main);
+      color: var(--bg-color-secondary);
+      padding: var(--padding-boxes);
+      box-shadow: var(--dropshadow);
+      margin: 0;
+    }
+
+    header h1 {
+      margin: 0;
+      padding: 10px;
+    }
+
+    header button {
+      background-color: var(--bg-color-secondary);
+      border-radius: var(--radius-boxes);
+      border: 1px solid var(--fg-color-main);
+      padding: var(--padding-boxes);
+      color: var(--fg-color-main);
+      font-size: var(--fontsize-default);
+      margin-top: calc(var(--fontsize-default) / 2);
+      cursor: pointer;
+    }
+
+    #results {
+      background-color: var(--bg-color-main);
+      color: var(--fg-color-main);
+      font-size: var(--fontsize-default);
+      border-radius: var(--radius-boxes);
+      padding: var(--padding-boxes);
+      box-shadow: var(--dropshadow);
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Dashboard</h1>
+    <button>Click Me</button>
+  </header>
+
+  <div id="results">
+    <p>This is the results section styled using CSS variables.</p>
+  </div>
+
+</body>
+</html>

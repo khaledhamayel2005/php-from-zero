@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+::placeholder { color: #D9E2EC;}
+
+input {border: 0;
+margin: 3px;
+padding: 7px 5px;
+border-radius: 2px;
+border-bottom: 1px solid;
+}
+input[type=submit]{
+border: 0;
+margin: 4px;
+padding: 5px;
+color: white;
+width: 100px;
+cursor: pointer;
+border-radius: 2px;
+background-color: #003E6B;
+}
+input[type=submit]:focus{
+border-radius: 5px;
+background-color: #F0F4F8;
+color: #003E6B;
+border: solid 1pt #9FB3C8;
+box-shadow: 4px 4px 8px
+rgba(159,179,200,.7);
+}
+</style>
+</head>
+<body>
+
+<h2>Form Style</h2>
+
+<form>
+  <input type="text" name="search" placeholder="Search.."/>
+  <input type="submit" name="search"/>
+</form>
+
+</body>
+</html>

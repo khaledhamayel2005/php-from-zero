@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+   <meta charset="utf-8">
+   <title>Fig 4-4 Id and class selector example</title>
+
+   <style>
+      div {
+         width: 100px;
+         height: 100px;
+            background-color: yellow;
+        border: 1px solid black; /* Add a border */
+      }
+      #first {
+         background-color: seagreen;
+      }
+
+
+      .orange {
+         background-color: orange;
+      }
+
+      #first {
+         background-color: gray;
+         border: 10px dotted red;
+      }
+      .circle {
+         background-color: royalblue;
+         border-radius: 50%;
+      }
+   </style>
+</head>
+<body>
+   <div></div>
+   <div></div>
+   <div id="first" class = "circle"></div>
+   <div class="circle"></div>
+   <div class="circle"></div>
+   <div class="orange"></div>
+   <div class="orange circle"></div>
+   <div class="circle orange" style = "background-color: red;"></div>
+</body>
+</html>

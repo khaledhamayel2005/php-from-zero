@@ -1,0 +1,16 @@
+Exam task:
+
+Create two PHP files:
+
+1. A helper file that contains functions.
+2. A main file that includes the helper file.
+
+Requirements:
+
+1. Store several books in an array.
+2. Write a function `bookPriceAfterDiscount($price, $discount)`.
+3. Write a function `displayBookRow($book)`.
+4. In the main page, use `require_once` to load the helper file.
+5. Display books in a table.
+6. Show the price after discount for each book.
+

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-color:#E7E9EB;
+}
+#myDIV {
+  height:300px;
+  display: grid;
+  gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+  /*Make the named item "myArea" span two columns in a five columns grid layout:*/
+  /*grid-template-areas: 'myArea myArea . . .';*/
+  /*grid-template-areas: 'myArea myArea .';*/
+  grid-template-areas: 'myArea myArea .' 'myArea myArea .';
+
+}
+#myDIV div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+.item1 {
+  grid-area: myArea;
+}
+</style>
+</head>
+<body>
+
+<h1>The grid-template-areas property</h1>
+<h3>Definition and Usage</h3>
+<p>
+ The grid-template-areas property specifies areas within the grid layout.
+<br/>
+You can name grid items by using the grid-area property, and then reference to the name in the grid-template-areas property.
+<br/>
+Each area is defined by apostrophes. Use a period sign to refer to a grid item with no name.
+<br/>
+</p>
+<h3>Example</h3>
+<hr/>
+<div id="myDIV">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>
+  <div class="item4">4</div>
+  <div class="item5">5</div>
+  <div class="item6">6</div>
+</div>
+
+</body>
+</html>

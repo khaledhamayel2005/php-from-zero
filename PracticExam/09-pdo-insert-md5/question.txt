@@ -1,0 +1,22 @@
+Exam task:
+
+Create a PDO registration page.
+
+Important:
+
+Use `md5`, not `password_hash`.
+
+Requirements:
+
+1. Create a table named `practice_users`.
+2. The form asks for:
+   - user id
+   - password
+   - full name
+   - role
+3. Validate that required fields are not empty.
+4. Check if the user id already exists.
+5. Insert the user using a prepared statement.
+6. The SQL must store the password using `md5(?)`.
+7. Display registered users without showing passwords.
+

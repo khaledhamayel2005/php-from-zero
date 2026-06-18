@@ -1,0 +1,25 @@
+.table-wrapper {
+  max-height: 200px;   /* Makes the table scrollable */
+  overflow-y: auto;
+  border: 1px solid #ccc;
+}
+
+th {
+  position: sticky;
+  top: 0;
+  background: #fff;    /* Prevents overlap transparency */
+  z-index: 2;          /* Keeps header above body rows */
+  padding: 8px;
+  border-bottom: 2px solid #ccc;
+}
+
+td {
+  padding: 8px;
+}
+.sticky {
+  position: sticky;
+  top: 0;          /* Distance from the top before it sticks */
+  background: white;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}

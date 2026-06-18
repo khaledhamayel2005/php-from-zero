@@ -1,0 +1,7 @@
+.green {
+   background-color: green;
+   border: 2px red groove;
+}
+
+   <link rel="stylesheet" href="test.css"/>
+     <div class="green circle orange"></div>

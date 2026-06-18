@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables Demo</title>
+    <style>
+        /* Define CSS variables in :root (global scope) */
+        :root {
+            --primary-color:#3498db;
+            --secondary-color: #2ecc71;
+            --text-color: #333;
+            --spacing: 20px;
+            --border-radius: 8px;
+            --fontsize-default: 18px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: var(--spacing);
+            color: var(--text-color);
+        }
+
+        h1 {
+            color: var(--primary-color);
+            margin-bottom: var(--spacing);
+        }
+
+        .card {
+            background-color: var(--primary-color);
+            color: white;
+            padding: var(--spacing);
+            margin-bottom: var(--spacing);
+            border-radius: var(--border-radius);
+        }
+
+        .card-secondary {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: var(--spacing);
+            margin-bottom: var(--spacing);
+            border-radius: var(--border-radius);
+        }
+
+        button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: calc(var(--spacing) / 2) var(--spacing);
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: calc( --fontsize-default / 2 );
+        }
+
+        button:hover {
+            /* You can modify variables using calc() */
+            opacity: 0.8;
+        }
+
+        /* Example: Override variables in a specific section */
+        .dark-theme {
+            --primary-color: #8e44ad;
+            --secondary-color: #e74c3c;
+            --text-color: #ecf0f1;
+            background-color: #2c3e50;
+            padding: var(--spacing);
+            border-radius: var(--border-radius);
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Variables Example</h1>
+
+    <p>CSS variables (custom properties) let you store values and reuse them throughout your stylesheet!</p>
+
+    <div class="card">
+        <h2>Primary Card</h2>
+        <p>This card uses the --primary-color variable</p>
+    </div>
+
+    <div class="card-secondary">
+        <h2>Secondary Card</h2>
+        <p>This card uses the --secondary-color variable</p>
+    </div>
+
+    <button>Click Me!</button>
+
+    <div class="dark-theme">
+        <h2>Dark Theme Section</h2>
+        <p>This section overrides the CSS variables to create a different theme!</p>
+        <div class="card">
+            <h3>Card in Dark Theme</h3>
+            <p>Notice how the same .card class looks different here because we redefined --primary-color</p>
+        </div>
+    </div>
+
+    <hr style="margin: 40px 0;">
+
+    <h2>Key Points:</h2>
+    <ul>
+        <li><strong>Define variables:</strong> Use <code>--variable-name: value;</code> in :root</li>
+        <li><strong>Use variables:</strong> Use <code>var(--variable-name)</code> anywhere in CSS</li>
+        <li><strong>Benefits:</strong> Easy to maintain, change theme colors in one place</li>
+        <li><strong>Scope:</strong> Variables can be global (:root) or scoped to specific elements</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Flex Example</title>
+  <style>
+
+nav ul {
+display: flex;
+align-items: center;
+justify-content: stretch;
+}
+nav li {
+flex: 1 1 auto;
+padding: 0.5em;
+}
+.right {
+flex-basis: 10em;
+text-align: right;
+}
+nav  li { list-style-type: none; margin: 0.25em 0; }
+nav li a:link {
+    color: #F48FB1;
+}
+.card {
+display:flex;
+width: 300px;
+flex-direction: column;
+}
+.card .content {
+  flex: 1 1 auto;
+}
+.card img {
+align-self: center;
+}
+.card h3, .card p, .card figcaption {
+text-align: center;
+}
+.card a {
+margin-top: auto;
+justify-self:flex-end;
+align-self: center;
+}
+</style>
+</head>
+<body>
+<nav>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">Products</a></li>
+<li><a href="#">Services</a></li>
+<li><a href="#">About</a></li>
+<li class="right"><img src="./images/menu.png" /></li>
+</ul>
+</nav>
+<div class="card">
+  <figure class="content">
+    <img src="./images/300.jpg" />
+    <figcaption>Albert Hall</figcaption>
+  </figure>
+      <a href="#">View</a>
+</div>
+<div class="card">
+  <figure class="content">
+    <img src="./images/300.jpg" />
+    <figcaption>Albert Hall</figcaption>
+  </figure>
+      <a href="#">View</a>
+</div>
+
+</body>
+</html>

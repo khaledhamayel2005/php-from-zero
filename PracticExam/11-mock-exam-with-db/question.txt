@@ -1,0 +1,26 @@
+Mock practical exam with database:
+
+Build a login and course registration system using PDO.
+
+Database scope:
+
+- Use PDO connection constants.
+- Use try/catch.
+- Use `query` for simple select.
+- Use prepared statements for login and inserts.
+- Use `md5(?)` for password checking.
+
+Requirements:
+
+1. Create tables:
+   - `practice_members`
+   - `practice_courses`
+   - `practice_registrations`
+2. Login with `userid` and password.
+3. Passwords are stored with `md5`.
+4. After login, display courses from the database.
+5. Let the user register for one course.
+6. Prevent duplicate registration for the same user and course.
+7. Display the user's registrations.
+8. Add logout.
+

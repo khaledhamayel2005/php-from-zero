@@ -1,0 +1,26 @@
+Exam task:
+
+Create a PDO page that displays books from MySQL.
+
+Database scope:
+
+Use only the material from `php2.pdf` slides 26-46:
+
+- connection constants
+- `new PDO`
+- try/catch
+- `query`
+- `fetch`
+- `prepare`
+- `bindValue`
+- `execute`
+
+Requirements:
+
+1. Create a `config.inc.php` file with database constants.
+2. Create a table named `practice_books`.
+3. Display all books ordered by title.
+4. Add a GET search box.
+5. If search is not empty, use a prepared statement.
+6. Print results in a table.
+

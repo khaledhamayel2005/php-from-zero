@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>List Item Selectors</title>
+  <style>
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      display: inline-block;
+      background-color: #c42a53;
+      color: white;
+      padding: 10px 15px;
+      margin: 2px;
+      cursor: pointer;
+    }
+
+    li:hover {
+      background-color: hotpink;
+    }
+
+
+    li:nth-child(2n) {
+      font-weight: bold;
+    }
+
+    li:nth-child(2n-1) {
+      text-decoration: underline;
+      
+    }
+    li:first-child {
+      opacity: 0.5;
+    }
+
+  </style>
+</head>
+<body>
+
+  <ul>
+    <li>Home</li>
+    <li>Mens</li>
+    <li>Womens</li>
+    <li>Kids</li>
+    <li>House</li>
+    <li>Garden</li>
+    <li>Contact</li>
+  </ul>
+
+</body>
+</html>
+
+<!--
+li:hover: Highlights item when mouse hovers.
+
+li:first-child: Applies reduced opacity to "Home".
+
+li:nth-child(2n): Applies bold to even-positioned items ("Mens", "Kids", etc.).
+
+li:nth-child(2n-1): Underlines odd-positioned items ("Home", "Womens", etc.).
+->
